@@ -4,7 +4,7 @@ class MainController < ApplicationController
   end
 
   def create
-    if params[:name]
+    unless params[:name].blank?
       Name.create(:name=>params[:name])
     end
     redirect_to(:controller=>"main", :action=>"index")
