@@ -1,105 +1,177 @@
-/* line 1, ../../../app/stylesheets/main.sass */
+/* line 7, ../../../app/stylesheets/main.scss */
 body {
   color: #333333;
   font-family: helvetica nueu, helvetica, arial, sans-serif;
   padding: 10px 20px;
 }
 
-/* line 6, ../../../app/stylesheets/main.sass */
-a, a:visited {
-  color: blue;
-  padding: 2px;
+/* line 12, ../../../app/stylesheets/main.scss */
+.clear {
+  clear: both;
 }
 
-/* line 9, ../../../app/stylesheets/main.sass */
+/* line 13, ../../../app/stylesheets/main.scss */
+.clearright {
+  clear: right;
+}
+
+/* line 14, ../../../app/stylesheets/main.scss */
+.clearleft {
+  clear: left;
+}
+
+/* line 16, ../../../app/stylesheets/main.scss */
+.notice {
+  color: red;
+  font-weight: bold;
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+/* line 22, ../../../app/stylesheets/main.scss */
+a, a:visited {
+  color: blue;
+  padding: 2px 3px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 30, ../../../app/stylesheets/main.scss */
+li.like a.like_link,
+li.dislike a.dislike_link,
+a.active,
 a:hover {
   background: blue;
   color: white;
   text-decoration: none;
 }
 
-/* line 14, ../../../app/stylesheets/main.sass */
+/* line 35, ../../../app/stylesheets/main.scss */
+a.like_link span {
+  text-decoration: none;
+}
+
+/* line 38, ../../../app/stylesheets/main.scss */
+span.count {
+  color: #999;
+  font-size: 11px;
+}
+
+/* line 42, ../../../app/stylesheets/main.scss */
 h1#logo {
   border-bottom: 1px dashed #ededed;
   font-weight: bold;
   font-size: 30px;
 }
 
-/* line 19, ../../../app/stylesheets/main.sass */
+/* line 47, ../../../app/stylesheets/main.scss */
 .login_links {
   float: right;
   margin-top: 10px;
 }
 
-/* line 23, ../../../app/stylesheets/main.sass */
+/* line 51, ../../../app/stylesheets/main.scss */
 #suggestion_box {
-  margin: 20px 0;
+  color: red;
+  margin: 0px 0 30px;
+}
+/* line 54, ../../../app/stylesheets/main.scss */
+#suggestion_box input#name {
+  width: 200px;
+}
+/* line 55, ../../../app/stylesheets/main.scss */
+#suggestion_box input.name_submit {
+  width: 75px;
 }
 
-/* line 27, ../../../app/stylesheets/main.sass */
-ul#suggestions li {
+/* line 58, ../../../app/stylesheets/main.scss */
+.sort {
+  font-size: 12px;
+  float: right;
+  margin-top: 5px;
+}
+
+/* line 64, ../../../app/stylesheets/main.scss */
+li.name {
   list-style-type: none;
   margin: 10px 0;
 }
-/* line 30, ../../../app/stylesheets/main.sass */
-ul#suggestions li .name {
+/* line 67, ../../../app/stylesheets/main.scss */
+li.name .name {
   font-size: 22px;
   font-weight: bold;
 }
-/* line 33, ../../../app/stylesheets/main.sass */
-ul#suggestions li .name_info {
+/* line 70, ../../../app/stylesheets/main.scss */
+li.name .name_info {
   color: #999999;
   font-size: 13px;
 }
 
-/* line 37, ../../../app/stylesheets/main.sass */
+/* line 74, ../../../app/stylesheets/main.scss */
 .loginform {
   width: 250px;
 }
 
-/* line 39, ../../../app/stylesheets/main.sass */
+/* line 77, ../../../app/stylesheets/main.scss */
 .signupform {
   width: 310px;
 }
 
-/* line 41, ../../../app/stylesheets/main.sass */
+/* line 80, ../../../app/stylesheets/main.scss */
 .loginform, .signupform {
+  float: right;
   margin: 30px 0px;
 }
-/* line 42, ../../../app/stylesheets/main.sass */
+/* line 83, ../../../app/stylesheets/main.scss */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 47, ../../../app/stylesheets/main.sass */
+/* line 87, ../../../app/stylesheets/main.scss */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 49, ../../../app/stylesheets/main.sass */
+/* line 89, ../../../app/stylesheets/main.scss */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 51, ../../../app/stylesheets/main.sass */
+/* line 91, ../../../app/stylesheets/main.scss */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 53, ../../../app/stylesheets/main.sass */
+/* line 93, ../../../app/stylesheets/main.scss */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 55, ../../../app/stylesheets/main.sass */
+/* line 95, ../../../app/stylesheets/main.scss */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* line 60, ../../../app/stylesheets/main.sass */
-h1.page_header {
-  font-size: 26px;
-  margin: 30px 0;
+/* line 99, ../../../app/stylesheets/main.scss */
+h1.page_title {
+  color: red;
+  font-size: 20px;
+  margin: 20px 0;
 }
-/* line 63, ../../../app/stylesheets/main.sass */
-h1.page_header a {
+/* line 103, ../../../app/stylesheets/main.scss */
+h1.page_title a {
   font-weight: bold;
+}
+
+/* line 106, ../../../app/stylesheets/main.scss */
+.main_container {
+  width: 50%;
+  margin: 0 auto;
+}
+/* line 109, ../../../app/stylesheets/main.scss */
+.main_container .meat {
+  padding-top: 5px;
+  padding-left: 5px;
 }

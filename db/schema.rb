@@ -11,6 +11,16 @@
 
 ActiveRecord::Schema.define(:version => 20100625061511) do
 
+  create_table "likes", :force => true do |t|
+    t.integer  "name_id",    :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "likes", ["name_id"], :name => "index_likes_on_name_id"
+  add_index "likes", ["user_id"], :name => "index_likes_on_user_id"
+
   create_table "names", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"

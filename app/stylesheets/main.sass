@@ -1,3 +1,7 @@
+@import "compass/css3";
+@import "compass/utilities";
+$default-border-radius: 5px
+
 body
   color: #333
   font-family: helvetica nueu, helvetica, arial, sans-serif
@@ -6,6 +10,16 @@ body
 a, a:visited
   color: blue
   padding: 2px 
+  @include border-radius()
+
+.notice
+  color: red
+  font-weight: bold
+  font-size: 22px
+  margin: 10px 0
+
+li.like a.like_link,
+li.dislike a.dislike_link,
 a:hover
   background: blue
   color: white
@@ -24,7 +38,7 @@ h1#logo
   margin: 20px 0
 
 ul#suggestions
-  li
+  li.name
     list-style-type: none
     margin: 10px 0
     .name
@@ -62,3 +76,7 @@ h1.page_header
   margin: 30px 0
   a
     font-weight: bold
+
+.main_container
+  width: 50%
+  margin: 0 auto

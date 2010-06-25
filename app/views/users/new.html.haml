@@ -1,5 +1,6 @@
+- @misc_js << "jq('#user_login')[0].focus();"
 .signupform
-  %h1 Register
+  %h1 Sign Up
   - form_for @user, :url => account_path do |f|
     = f.error_messages
     = render :partial => "form", :object => f

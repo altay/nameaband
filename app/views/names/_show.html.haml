@@ -1,0 +1,13 @@
+%li{:class=>"name name_#{name.secret_id}"}
+  %p.name
+    = h(name.name) 
+  %p.name_info
+    submitted by 
+    = link_to(h(name.user.login), profile_url(:login=>name.user.login))
+    &bull;
+    = link_to_function('like', "BN.toggle_like('#{name.secret_id}')", :class=>'like_link') 
+    (
+    %span{:class=>"count likes_count_#{name.secret_id}"}<>= name.likes_count.to_s
+    )
+    &bull;
+    = link_to_function('dislike', "alert('coming soon!')", :class=>'dislike_link') #"BN.toggle_dislike('#{name.secret_id}')", :class=>'dislike_link') 

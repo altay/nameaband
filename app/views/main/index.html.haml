@@ -1,8 +1,0 @@
-#suggestion_box
-  - form_tag("/main/create", :method=>"post") do 
-    Suggest a name: 
-    = text_field_tag("name")
-    = submit_tag("Submit")
-%ul#suggestions
-  - @names.each do |name|
-    = render(:partial=>'names/show', :locals=>{:name=>name})

@@ -1,10 +1,11 @@
+- @misc_js << "jq('#user_session_login')[0].focus();"
 .loginform
   %h1 Log in
   - form_for @user_session, :url => user_session_path do |f|
     = f.error_messages
     %table
       %tr
-        %td.label= f.label :login
+        %td.label= f.label :login, "Username"
         %td= f.text_field :login
       %tr
         %td.label= f.label :password

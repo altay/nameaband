@@ -1,11 +1,16 @@
-%h1.page_header
+%h1.page_title
   = link_to(h(@user.login), profile_url(:login=>@user.login))
-  has suggested these names...
-
+  = (@suggested_names.empty? ? "hasn't suggested any band names." : "has suggested these names...")
 %ul#suggestions
-  - @names.each do |name|
+  - @suggested_names.each do |name|
     = render(:partial=>'names/show', :locals=>{:name=>name})
 
+%h1.page_title
+  = link_to(h(@user.login), profile_url(:login=>@user.login))
+  = (@liked_names.empty? ? "doesn't like any band names." : "likes these names...")
+%ul#liked
+  - @liked_names.each do |name|
+    = render(:partial=>'names/show', :locals=>{:name=>name})
 
 /
   %p

@@ -3,8 +3,14 @@ class ApplicationController < ActionController::Base
   #protect_from_forgery # See ActionController::RequestForgeryProtection for details
   helper_method :current_user_session, :current_user
   filter_parameter_logging :password, :password_confirmation
+  before_filter :initialize_session
   
   private
+    def initialize_session
+      @misc_js ||= []
+      @active_sort ||= "new"
+    end
+
     def current_user_session
       return @current_user_session if defined?(@current_user_session)
       @current_user_session = UserSession.find
@@ -18,8 +24,8 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "You must be logged in to access this page"
-        redirect_to new_user_session_url
+        flash[:notice] = "Hey! You need to log in first."
+        redirect_to login_url
         return false
       end
     end
@@ -41,4 +47,5 @@ class ApplicationController < ActionController::Base
       redirect_to(session[:return_to] || default)
       session[:return_to] = nil
     end
+
 end
