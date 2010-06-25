@@ -98,79 +98,80 @@ h1#logo {
 /* line 64, ../../../app/stylesheets/main.scss */
 li.name {
   list-style-type: none;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 /* line 67, ../../../app/stylesheets/main.scss */
 li.name .name {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 1px;
 }
-/* line 70, ../../../app/stylesheets/main.scss */
+/* line 71, ../../../app/stylesheets/main.scss */
 li.name .name_info {
   color: #999999;
   font-size: 13px;
 }
 
-/* line 74, ../../../app/stylesheets/main.scss */
+/* line 75, ../../../app/stylesheets/main.scss */
 .loginform {
   width: 250px;
 }
 
-/* line 77, ../../../app/stylesheets/main.scss */
+/* line 78, ../../../app/stylesheets/main.scss */
 .signupform {
   width: 310px;
 }
 
-/* line 80, ../../../app/stylesheets/main.scss */
+/* line 81, ../../../app/stylesheets/main.scss */
 .loginform, .signupform {
   float: right;
   margin: 30px 0px;
 }
-/* line 83, ../../../app/stylesheets/main.scss */
+/* line 84, ../../../app/stylesheets/main.scss */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 87, ../../../app/stylesheets/main.scss */
+/* line 88, ../../../app/stylesheets/main.scss */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 89, ../../../app/stylesheets/main.scss */
+/* line 90, ../../../app/stylesheets/main.scss */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 91, ../../../app/stylesheets/main.scss */
+/* line 92, ../../../app/stylesheets/main.scss */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 93, ../../../app/stylesheets/main.scss */
+/* line 94, ../../../app/stylesheets/main.scss */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 95, ../../../app/stylesheets/main.scss */
+/* line 96, ../../../app/stylesheets/main.scss */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* line 99, ../../../app/stylesheets/main.scss */
+/* line 100, ../../../app/stylesheets/main.scss */
 h1.page_title {
   color: red;
   font-size: 20px;
   margin: 20px 0;
 }
-/* line 103, ../../../app/stylesheets/main.scss */
+/* line 104, ../../../app/stylesheets/main.scss */
 h1.page_title a {
   font-weight: bold;
 }
 
-/* line 106, ../../../app/stylesheets/main.scss */
+/* line 107, ../../../app/stylesheets/main.scss */
 .main_container {
   width: 50%;
   margin: 0 auto;
 }
-/* line 109, ../../../app/stylesheets/main.scss */
+/* line 110, ../../../app/stylesheets/main.scss */
 .main_container .meat {
   padding-top: 5px;
   padding-left: 5px;
