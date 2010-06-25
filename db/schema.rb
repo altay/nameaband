@@ -9,15 +9,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100625055648) do
+ActiveRecord::Schema.define(:version => 20100625061511) do
 
   create_table "names", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.integer  "likes_count", :default => 0
   end
 
+  add_index "names", ["created_at"], :name => "index_names_on_created_at"
+  add_index "names", ["likes_count"], :name => "index_names_on_likes_count"
+  add_index "names", ["name"], :name => "index_names_on_name"
   add_index "names", ["user_id"], :name => "index_names_on_user_id"
 
   create_table "users", :force => true do |t|

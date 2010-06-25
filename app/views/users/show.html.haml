@@ -4,16 +4,7 @@
 
 %ul#suggestions
   - @names.each do |name|
-    %li
-      %p.name
-        = sanitize(name.name) 
-      %p.name_info
-        submitted by 
-        = link_to(sanitize(name.user.login), profile_url(:login=>name.user.login))
-        &bull;
-        = link_to('like') 
-        &bull;
-        = link_to('dislike') 
+    = render(:partial=>'names/show', :locals=>{:name=>name})
 
 
 /
