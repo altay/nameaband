@@ -14,18 +14,22 @@ var BN = new function() {
   }
 
   this.toggle_like = function(nid) {
-    jq.post(
-      '/names/toggle_like', 
-      {name_id: nid},
-      function(r) {
-        var name_lis = jq('li.name_'+nid);
-        if (r.error) { alert(r.error); }
-        else { name_lis.toggleClass('like'); }
-        var likes_counts = jq("span.likes_count_"+nid);
-        (name_lis.hasClass('like') ? BN.utils.increment_html(likes_counts) : BN.utils.decrement_html(likes_counts));
-      }, 
-      'json'
-    )
+    if (BN.logged_in) {
+      jq.post(
+        '/names/toggle_like', 
+        {name_id: nid},
+        function(r) {
+          var name_lis = jq('li.name_'+nid);
+          if (r.error) { alert(r.error); }
+          else { name_lis.toggleClass('like'); }
+          var likes_counts = jq("span.likes_count_"+nid);
+          (name_lis.hasClass('like') ? BN.utils.increment_html(likes_counts) : BN.utils.decrement_html(likes_counts));
+        }, 
+        'json'
+      )
+    } else {
+      alert("First, you need to log in, buddy. Upper right corner.");
+    }
   }
 }
 BN.utils = new function() {
