@@ -42,6 +42,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :user_session
   map.resource :account, :controller => "users"
   map.resources :users
+  map.connect 'people/:login/:active_sort', :controller=>"users", :action=>"show"
   map.profile 'people/:login', :controller=>"users", :action=>"show"
 
   # names

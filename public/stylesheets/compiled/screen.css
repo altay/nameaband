@@ -133,7 +133,7 @@ body.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 22, ../../../app/stylesheets/screen.scss */
+/* line 22, ../sass/screen.scss */
 body.bp {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -507,7 +507,7 @@ form.bp textarea {
   height: 250px;
 }
 
-/* line 36, ../../../app/stylesheets/screen.scss */
+/* line 36, ../sass/screen.scss */
 body.two-col #container {
   width: 950px;
   margin: 0 auto;
@@ -518,7 +518,7 @@ body.two-col #container {
 body.two-col #container {
   display: block;
 }
-/* line 38, ../../../app/stylesheets/screen.scss */
+/* line 38, ../sass/screen.scss */
 body.two-col #header, body.two-col #footer {
   display: inline;
   float: left;
@@ -529,7 +529,7 @@ body.two-col #header, body.two-col #footer {
 * html body.two-col #header, * html body.two-col #footer {
   overflow-x: hidden;
 }
-/* line 40, ../../../app/stylesheets/screen.scss */
+/* line 40, ../sass/screen.scss */
 body.two-col #sidebar {
   display: inline;
   float: left;
@@ -540,7 +540,7 @@ body.two-col #sidebar {
 * html body.two-col #sidebar {
   overflow-x: hidden;
 }
-/* line 44, ../../../app/stylesheets/screen.scss */
+/* line 44, ../sass/screen.scss */
 body.two-col #content {
   display: inline;
   float: left;

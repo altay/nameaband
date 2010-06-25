@@ -26,6 +26,15 @@
             &bull;
             \#{link_to "Logout", user_session_path, :method => :delete}
         %h1#logo What's a good name for a band?
+        .subheader
+          - if @active_sort
+            = yield :sort_menu
+          - unless @no_suggestion_box
+            #suggestion_box
+              - form_tag("/names/create", :method=>"post") do 
+                Suggest a name:&nbsp;
+                = text_field_tag("name")
+                = submit_tag("Submit", :class=>"name_submit")
       .meat
         - if flash[:notice]
           %p{:class => "notice"}= flash[:notice]

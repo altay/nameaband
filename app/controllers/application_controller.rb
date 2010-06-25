@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   private
     def initialize_session
       @misc_js ||= []
-      @active_sort ||= "new"
     end
 
     def current_user_session

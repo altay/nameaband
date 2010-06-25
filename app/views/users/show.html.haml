@@ -1,3 +1,8 @@
+- content_for :sort_menu do  
+  .sort
+    - [["Newest", "new"], ["Most liked", "likes"], ["Alphabetical", "alpha"]].each do |s|
+      = link_to(s[0], format("/people/%s/%s", h(@user.login), s[1]), :class=>("active" if s[1]==@active_sort))
+
 %h1.page_title
   = link_to(h(@user.login), profile_url(:login=>@user.login))
   = (@suggested_names.empty? ? "hasn't suggested any band names." : "has suggested these names...")

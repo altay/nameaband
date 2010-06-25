@@ -7,7 +7,7 @@ $default-border-radius: 5px;
 body {
   color: #333333;
   font-family: helvetica nueu, helvetica, arial, sans-serif;
-  padding: 10px 20px; }
+  padding: 0px 20px; }
 
 .clear { clear: both; }
 .clearright { clear: right; }
@@ -40,7 +40,7 @@ span.count {
   font-size: 11px;
 }
 h1#logo {
-  border-bottom: 1px dashed #ededed;
+  //border-bottom: 1px dashed #ededed;
   font-weight: bold;
   font-size: 30px; }
 
@@ -50,7 +50,6 @@ h1#logo {
 
 #suggestion_box {
   color: red;
-  margin: 0px 0 30px; 
   input#name { width: 200px; }
   input.name_submit { width: 75px; }
 }
@@ -107,6 +106,20 @@ h1.page_title {
 .main_container {
   width: 50%;
   margin: 0 auto; 
+  .header {
+    @include box-shadow(#cccccc, 1px, 1px, 5px);
+    @include border-bottom-radius;
+    background: white;
+    position: fixed;
+    padding: 5px 20px 10px;
+    margin-left: -20px;
+    width: 50%;
+    .subheader {
+      margin-top: 5px;
+      margin-left: 5px;
+    }
+  }
   .meat {
-    padding-top: 5px;
+    padding-top: 80px;
     padding-left: 5px; } }
+

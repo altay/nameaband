@@ -1,26 +1,26 @@
-/* line 7, ../../../app/stylesheets/main.scss */
+/* line 7, ../sass/main.scss */
 body {
   color: #333333;
   font-family: helvetica nueu, helvetica, arial, sans-serif;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
-/* line 12, ../../../app/stylesheets/main.scss */
+/* line 12, ../sass/main.scss */
 .clear {
   clear: both;
 }
 
-/* line 13, ../../../app/stylesheets/main.scss */
+/* line 13, ../sass/main.scss */
 .clearright {
   clear: right;
 }
 
-/* line 14, ../../../app/stylesheets/main.scss */
+/* line 14, ../sass/main.scss */
 .clearleft {
   clear: left;
 }
 
-/* line 16, ../../../app/stylesheets/main.scss */
+/* line 16, ../sass/main.scss */
 .notice {
   color: red;
   font-weight: bold;
@@ -28,7 +28,7 @@ body {
   margin: 10px 0;
 }
 
-/* line 22, ../../../app/stylesheets/main.scss */
+/* line 22, ../sass/main.scss */
 a, a:visited {
   color: blue;
   padding: 2px 3px;
@@ -40,7 +40,7 @@ a, a:visited {
   border-radius: 5px;
 }
 
-/* line 30, ../../../app/stylesheets/main.scss */
+/* line 30, ../sass/main.scss */
 li.like a.like_link,
 li.dislike a.dislike_link,
 a.active,
@@ -50,129 +50,156 @@ a:hover {
   text-decoration: none;
 }
 
-/* line 35, ../../../app/stylesheets/main.scss */
+/* line 35, ../sass/main.scss */
 a.like_link span {
   text-decoration: none;
 }
 
-/* line 38, ../../../app/stylesheets/main.scss */
+/* line 38, ../sass/main.scss */
 span.count {
   color: #999;
   font-size: 11px;
 }
 
-/* line 42, ../../../app/stylesheets/main.scss */
+/* line 42, ../sass/main.scss */
 h1#logo {
-  border-bottom: 1px dashed #ededed;
   font-weight: bold;
   font-size: 30px;
 }
 
-/* line 47, ../../../app/stylesheets/main.scss */
+/* line 47, ../sass/main.scss */
 .login_links {
   float: right;
   margin-top: 10px;
 }
 
-/* line 51, ../../../app/stylesheets/main.scss */
+/* line 51, ../sass/main.scss */
 #suggestion_box {
   color: red;
-  margin: 0px 0 30px;
 }
-/* line 54, ../../../app/stylesheets/main.scss */
+/* line 53, ../sass/main.scss */
 #suggestion_box input#name {
   width: 200px;
 }
-/* line 55, ../../../app/stylesheets/main.scss */
+/* line 54, ../sass/main.scss */
 #suggestion_box input.name_submit {
   width: 75px;
 }
 
-/* line 58, ../../../app/stylesheets/main.scss */
+/* line 57, ../sass/main.scss */
 .sort {
   font-size: 12px;
   float: right;
   margin-top: 5px;
 }
 
-/* line 64, ../../../app/stylesheets/main.scss */
+/* line 63, ../sass/main.scss */
 li.name {
   list-style-type: none;
   margin: 15px 0;
 }
-/* line 67, ../../../app/stylesheets/main.scss */
+/* line 66, ../sass/main.scss */
 li.name .name {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 1px;
 }
-/* line 71, ../../../app/stylesheets/main.scss */
+/* line 70, ../sass/main.scss */
 li.name .name_info {
   color: #999999;
   font-size: 13px;
 }
 
-/* line 75, ../../../app/stylesheets/main.scss */
+/* line 74, ../sass/main.scss */
 .loginform {
   width: 250px;
 }
 
-/* line 78, ../../../app/stylesheets/main.scss */
+/* line 77, ../sass/main.scss */
 .signupform {
   width: 310px;
 }
 
-/* line 81, ../../../app/stylesheets/main.scss */
+/* line 80, ../sass/main.scss */
 .loginform, .signupform {
   float: right;
   margin: 30px 0px;
 }
-/* line 84, ../../../app/stylesheets/main.scss */
+/* line 83, ../sass/main.scss */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 88, ../../../app/stylesheets/main.scss */
+/* line 87, ../sass/main.scss */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 90, ../../../app/stylesheets/main.scss */
+/* line 89, ../sass/main.scss */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 92, ../../../app/stylesheets/main.scss */
+/* line 91, ../sass/main.scss */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 94, ../../../app/stylesheets/main.scss */
+/* line 93, ../sass/main.scss */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 96, ../../../app/stylesheets/main.scss */
+/* line 95, ../sass/main.scss */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* line 100, ../../../app/stylesheets/main.scss */
+/* line 99, ../sass/main.scss */
 h1.page_title {
   color: red;
   font-size: 20px;
   margin: 20px 0;
 }
-/* line 104, ../../../app/stylesheets/main.scss */
+/* line 103, ../sass/main.scss */
 h1.page_title a {
   font-weight: bold;
 }
 
-/* line 107, ../../../app/stylesheets/main.scss */
+/* line 106, ../sass/main.scss */
 .main_container {
   width: 50%;
   margin: 0 auto;
 }
-/* line 110, ../../../app/stylesheets/main.scss */
+/* line 109, ../sass/main.scss */
+.main_container .header {
+  -moz-box-shadow: #cccccc 1px 1px 5px;
+  -webkit-box-shadow: #cccccc 1px 1px 5px;
+  -o-box-shadow: #cccccc 1px 1px 5px;
+  box-shadow: #cccccc 1px 1px 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: white;
+  position: fixed;
+  padding: 5px 20px 10px;
+  margin-left: -20px;
+  width: 50%;
+}
+/* line 117, ../sass/main.scss */
+.main_container .header .subheader {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+/* line 122, ../sass/main.scss */
 .main_container .meat {
-  padding-top: 5px;
+  padding-top: 80px;
   padding-left: 5px;
 }
