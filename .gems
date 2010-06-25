@@ -1,3 +1,4 @@
+haml -v '>= 3.0.13'
 twitter
 authlogic
 compass -v ">= 0.10.2"
