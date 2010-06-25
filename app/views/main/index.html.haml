@@ -9,7 +9,8 @@
       %p.name
         = sanitize(name.name) 
       %p.name_info
-        submitted by altay
+        submitted by 
+        = link_to(sanitize(name.user.login), profile_url(:login=>name.user.login))
         &bull;
         = link_to('like') 
         &bull;

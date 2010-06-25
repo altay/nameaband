@@ -42,6 +42,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource :account, :controller => "users"
   map.resources :users
   map.root :controller=>"main"
+  map.profile 'users/:login', :controller=>"users", :action=>"show"
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
 end

@@ -9,13 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100625035341) do
+ActiveRecord::Schema.define(:version => 20100625055648) do
 
   create_table "names", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "names", ["user_id"], :name => "index_names_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "login",                              :null => false

@@ -1,79 +1,97 @@
 /* line 1, ../../../app/stylesheets/main.sass */
 body {
+  color: #333333;
   font-family: helvetica nueu, helvetica, arial, sans-serif;
-  padding: 20px;
+  padding: 10px 20px;
 }
 
-/* line 5, ../../../app/stylesheets/main.sass */
+/* line 6, ../../../app/stylesheets/main.sass */
+a, a:visited {
+  color: blue;
+}
+
+/* line 9, ../../../app/stylesheets/main.sass */
 h1#logo {
+  border-bottom: 1px dashed #ededed;
   font-weight: bold;
   font-size: 30px;
 }
 
-/* line 9, ../../../app/stylesheets/main.sass */
+/* line 14, ../../../app/stylesheets/main.sass */
 .login_links {
   float: right;
+  margin-top: 10px;
 }
 
-/* line 12, ../../../app/stylesheets/main.sass */
+/* line 18, ../../../app/stylesheets/main.sass */
 #suggestion_box {
   margin: 20px 0;
 }
 
-/* line 16, ../../../app/stylesheets/main.sass */
+/* line 22, ../../../app/stylesheets/main.sass */
 ul#suggestions li {
   list-style-type: none;
   margin: 10px 0;
 }
-/* line 19, ../../../app/stylesheets/main.sass */
+/* line 25, ../../../app/stylesheets/main.sass */
 ul#suggestions li .name {
   font-size: 22px;
   font-weight: bold;
 }
-/* line 22, ../../../app/stylesheets/main.sass */
+/* line 28, ../../../app/stylesheets/main.sass */
 ul#suggestions li .name_info {
   color: #999999;
   font-size: 13px;
 }
 
-/* line 26, ../../../app/stylesheets/main.sass */
+/* line 32, ../../../app/stylesheets/main.sass */
 .loginform {
   width: 250px;
 }
 
-/* line 28, ../../../app/stylesheets/main.sass */
+/* line 34, ../../../app/stylesheets/main.sass */
 .signupform {
   width: 310px;
 }
 
-/* line 30, ../../../app/stylesheets/main.sass */
+/* line 36, ../../../app/stylesheets/main.sass */
 .loginform, .signupform {
   margin: 30px 0px;
 }
-/* line 31, ../../../app/stylesheets/main.sass */
+/* line 37, ../../../app/stylesheets/main.sass */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 36, ../../../app/stylesheets/main.sass */
+/* line 42, ../../../app/stylesheets/main.sass */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 38, ../../../app/stylesheets/main.sass */
+/* line 44, ../../../app/stylesheets/main.sass */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 40, ../../../app/stylesheets/main.sass */
+/* line 46, ../../../app/stylesheets/main.sass */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 42, ../../../app/stylesheets/main.sass */
+/* line 48, ../../../app/stylesheets/main.sass */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 44, ../../../app/stylesheets/main.sass */
+/* line 50, ../../../app/stylesheets/main.sass */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
+}
+
+/* line 55, ../../../app/stylesheets/main.sass */
+h1.page_header {
+  font-size: 26px;
+  margin: 30px 0;
+}
+/* line 58, ../../../app/stylesheets/main.sass */
+h1.page_header a {
+  font-weight: bold;
 }
