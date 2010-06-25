@@ -1,12 +1,16 @@
-%html
-  %head
-    %title "Good Name for a Band"
-  %body
-    %h1 What's a good name for a band?
-    - form_tag("/main/create", :method=>"post") do 
-      Suggest a name: 
-      = text_field_tag("name")
-      = submit_tag("Submit")
-    %ul
-      - @names.each do |name|
-        %li= sanitize(name.name)
+#suggestion_box
+  - form_tag("/main/create", :method=>"post") do 
+    Suggest a name: 
+    = text_field_tag("name")
+    = submit_tag("Submit")
+%ul#suggestions
+  - @names.each do |name|
+    %li
+      %p.name
+        = sanitize(name.name) 
+      %p.name_info
+        submitted by altay
+        &bull;
+        = link_to('like') 
+        &bull;
+        = link_to('dislike') 

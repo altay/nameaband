@@ -1,0 +1,10 @@
+%table
+  %tr
+    %td.label= form.label :login, "Username"
+    %td= form.text_field :login
+  %tr
+    %td.label= form.label :password, form.object.new_record? ? nil : "Change password"
+    %td= form.password_field :password
+  %tr
+    %td.label= form.label :password_confirmation, "Confirm&nbsp;password"
+    %td= form.password_field :password_confirmation

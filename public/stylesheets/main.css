@@ -1,0 +1,8 @@
+body {
+  font-family: helvetica nueu, helvetica, arial, sans-serif; }
+
+ul#suggestions li span.bandname {
+  font-size: 22px;
+  font-weight: bold; }
+ul#suggestions li a {
+  font-size: 14px; }

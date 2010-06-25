@@ -1,0 +1,10 @@
+.signupform
+  %h1 Register
+  - form_for @user, :url => account_path do |f|
+    = f.error_messages
+    = render :partial => "form", :object => f
+    %p
+      = f.submit "Sign up"
+    %p.signuplink
+      Already have an account?
+      = link_to "Log In", new_user_session_path
