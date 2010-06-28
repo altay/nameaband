@@ -70,7 +70,8 @@ class NamesController < ApplicationController
   def create
     unless params[:name].blank?
       flash[:notice] = "Nice one."
-      Name.create(:name=>params[:name], :user_id=>current_user.id)
+      @name = Name.create(:name=>params[:name], :user_id=>current_user.id)
+      TheMailer.deliver_new_name_notification(@name)
     end
     redirect_to('/') and return
   end
