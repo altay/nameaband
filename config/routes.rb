@@ -48,7 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   # names
   map.root :controller=>"names", :action=>"list"
   map.connect 'names/create', :controller=>'names', :action=>'create'
-  map.connect 'names/toggle_like', :controller=>'names', :action=>'toggle_like'
+  map.connect 'names/toggle_opinion', :controller=>'names', :action=>'toggle_opinion'
   map.list_names 'names/:active_sort', :controller=>"names", :action=>"list"
 
   map.connect ':controller/:action/:id'

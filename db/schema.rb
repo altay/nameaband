@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100626104143) do
+ActiveRecord::Schema.define(:version => 20100627005238) do
+
+  create_table "dislikes", :force => true do |t|
+    t.integer  "name_id",    :null => false
+    t.integer  "user_id",    :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "dislikes", ["name_id"], :name => "index_dislikes_on_name_id"
+  add_index "dislikes", ["user_id"], :name => "index_dislikes_on_user_id"
 
   create_table "likes", :force => true do |t|
     t.integer  "name_id",    :null => false
@@ -26,10 +36,12 @@ ActiveRecord::Schema.define(:version => 20100626104143) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.integer  "likes_count", :default => 0
+    t.integer  "likes_count",    :default => 0
+    t.integer  "dislikes_count", :default => 0
   end
 
   add_index "names", ["created_at"], :name => "index_names_on_created_at"
+  add_index "names", ["dislikes_count"], :name => "index_names_on_dislikes_count"
   add_index "names", ["likes_count"], :name => "index_names_on_likes_count"
   add_index "names", ["name"], :name => "index_names_on_name"
   add_index "names", ["user_id"], :name => "index_names_on_user_id"
