@@ -3,3 +3,4 @@ twitter
 authlogic
 compass -v ">= 0.10.2"
 hassle
+facebooker

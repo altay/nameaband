@@ -10,6 +10,9 @@ class NamesController < ApplicationController
     @misc_js << "BN.set_opinions(#{@disliked_nids.inspect}, 'dislike');"
   end
 
+  def random
+  end
+
 =begin # toggle_opinion use cases
       - X no opinion, liking
         - create like

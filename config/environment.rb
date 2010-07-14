@@ -24,6 +24,7 @@ Rails::Initializer.run do |config|
   config.gem "authlogic"
   config.gem "compass", :version => ">= 0.10.2"
   config.gem "hassle"
+  config.gem "facebooker"
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named

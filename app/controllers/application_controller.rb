@@ -23,8 +23,8 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "Hey! You need to log in first."
-        redirect_to login_url
+        flash[:notice] = "Hey! You need to sign in or sign up. Or ship out."
+        redirect_to signup_url
         return false
       end
     end

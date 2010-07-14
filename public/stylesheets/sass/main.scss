@@ -40,9 +40,17 @@ span.count {
   font-size: 11px;
 }
 h1#logo {
-  //border-bottom: 1px dashed #ededed;
   font-weight: bold;
-  font-size: 30px; }
+  font-size: 30px; 
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  a:hover {
+    background: #fff;
+    text-decoration: underline;
+  }
+  }
 
 .login_links {
   float: right;
@@ -104,7 +112,7 @@ h1.page_title {
     font-weight: bold; } }
 
 .main_container {
-  width: 50%;
+  width: 700px;
   margin: 0 auto; 
   .header {
     @include box-shadow(#cccccc, 1px, 1px, 5px);
@@ -113,13 +121,17 @@ h1.page_title {
     position: fixed;
     padding: 5px 20px 10px;
     margin-left: -20px;
-    width: 50%;
+    width: 700px;
     .subheader {
-      margin-top: 5px;
-      margin-left: 5px;
+      margin: 5px;
+      .fb_like_site {
+        height: 1em;
+        padding: 15px 0 5px;
+      }
     }
   }
   .meat {
+    //padding-top: 120px; // if fb like button
     padding-top: 80px;
     padding-left: 5px; } }
 

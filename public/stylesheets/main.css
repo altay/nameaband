@@ -66,110 +66,120 @@ h1#logo {
   font-weight: bold;
   font-size: 30px;
 }
+/* line 45, sass/main.scss */
+h1#logo a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 49, sass/main.scss */
+h1#logo a:hover {
+  background: #fff;
+  text-decoration: underline;
+}
 
-/* line 47, sass/main.scss */
+/* line 55, sass/main.scss */
 .login_links {
   float: right;
   margin-top: 10px;
 }
 
-/* line 51, sass/main.scss */
+/* line 59, sass/main.scss */
 #suggestion_box {
   color: red;
 }
-/* line 53, sass/main.scss */
+/* line 61, sass/main.scss */
 #suggestion_box input#name {
   width: 200px;
 }
-/* line 54, sass/main.scss */
+/* line 62, sass/main.scss */
 #suggestion_box input.name_submit {
   width: 75px;
 }
 
-/* line 57, sass/main.scss */
+/* line 65, sass/main.scss */
 .sort {
   font-size: 12px;
   float: right;
   margin-top: 5px;
 }
 
-/* line 63, sass/main.scss */
+/* line 71, sass/main.scss */
 li.name {
   list-style-type: none;
   margin: 15px 0;
 }
-/* line 66, sass/main.scss */
+/* line 74, sass/main.scss */
 li.name .name {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 1px;
 }
-/* line 70, sass/main.scss */
+/* line 78, sass/main.scss */
 li.name .name_info {
   color: #999999;
   font-size: 13px;
 }
 
-/* line 74, sass/main.scss */
+/* line 82, sass/main.scss */
 .loginform {
   width: 250px;
 }
 
-/* line 77, sass/main.scss */
+/* line 85, sass/main.scss */
 .signupform {
   width: 310px;
 }
 
-/* line 80, sass/main.scss */
+/* line 88, sass/main.scss */
 .loginform, .signupform {
   float: right;
   margin: 30px 0px;
 }
-/* line 83, sass/main.scss */
+/* line 91, sass/main.scss */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 87, sass/main.scss */
+/* line 95, sass/main.scss */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 89, sass/main.scss */
+/* line 97, sass/main.scss */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 91, sass/main.scss */
+/* line 99, sass/main.scss */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 93, sass/main.scss */
+/* line 101, sass/main.scss */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 95, sass/main.scss */
+/* line 103, sass/main.scss */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* line 99, sass/main.scss */
+/* line 107, sass/main.scss */
 h1.page_title {
   color: red;
   font-size: 20px;
   margin: 20px 0;
 }
-/* line 103, sass/main.scss */
+/* line 111, sass/main.scss */
 h1.page_title a {
   font-weight: bold;
 }
 
-/* line 106, sass/main.scss */
+/* line 114, sass/main.scss */
 .main_container {
-  width: 50%;
+  width: 700px;
   margin: 0 auto;
 }
-/* line 109, sass/main.scss */
+/* line 117, sass/main.scss */
 .main_container .header {
   -moz-box-shadow: #cccccc 1px 1px 5px;
   -webkit-box-shadow: #cccccc 1px 1px 5px;
@@ -191,14 +201,18 @@ h1.page_title a {
   position: fixed;
   padding: 5px 20px 10px;
   margin-left: -20px;
-  width: 50%;
+  width: 700px;
 }
-/* line 117, sass/main.scss */
+/* line 125, sass/main.scss */
 .main_container .header .subheader {
-  margin-top: 5px;
-  margin-left: 5px;
+  margin: 5px;
 }
-/* line 122, sass/main.scss */
+/* line 127, sass/main.scss */
+.main_container .header .subheader .fb_like_site {
+  height: 1em;
+  padding: 15px 0 5px;
+}
+/* line 133, sass/main.scss */
 .main_container .meat {
   padding-top: 80px;
   padding-left: 5px;

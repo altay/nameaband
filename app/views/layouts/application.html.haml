@@ -1,17 +1,40 @@
 !!!
-%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml"}
+%html{:lang => "en", "xml:lang" => "en", :xmlns => "http://www.w3.org/1999/xhtml", "xmlns:fb"=>"http://www.facebook.com/2008/fbml", "xmlns:og"=>"http://opengraphprotocol.org/schema/"}
   %head
     %meta{:content => "text/html;charset=UTF-8", "http-equiv" => "content-type"}/
     %title
-      = controller.controller_name
-      \: #{controller.action_name}
-    = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/print.css', :media => 'print'
+      - if @title
+        = @title
+      - else
+        WhatsAGoodNameForABand.com : 
+        = controller.controller_name
+        \: #{controller.action_name}
+    -#<title>The Rock (1996)</title>
+    <meta property="og:title" content="The Rock"/>
+    %meta{:property=>"og:title", :content=>"WhatsAGoodNameForABand.com"}
+    %meta{:property=>"og:type", :content=>"website"}
+    %meta{:property=>"og:url", :content=>"http://www.whatsagoodnameforaband.com"}
+    -#<meta property="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
+    %meta{:property=>"fb:app_id", :content=>138679139477508}
+    = stylesheet_link_tag '/stylesheets/compiled/screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag '/stylesheets/compiled/print.css', :media => 'print'
     /[if lt IE 8]
-      = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
-    = stylesheet_link_tag 'compiled/main.css', :media => 'screen, projection'
+      = stylesheet_link_tag '/stylesheets/compiled/ie.css', :media => 'screen, projection'
+    = stylesheet_link_tag '/stylesheets/compiled/main.css', :media => 'screen, projection'
     = javascript_include_tag('http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js')
   %body
+    #fb-root
+    :javascript
+      window.fbAsyncInit = function() {
+        FB.init({appId: '9a1d871fa858cedb024b81c3fc731de4', status: true, cookie: true,
+                 xfbml: true});
+      };
+      (function() {
+        var e = document.createElement('script'); e.async = true;
+        e.src = document.location.protocol +
+          '//connect.facebook.net/en_US/all.js';
+        document.getElementById('fb-root').appendChild(e);
+      }());
     .main_container
       .header
         .login_links
@@ -25,7 +48,7 @@
             = link_to "Profile", account_path
             &bull;
             \#{link_to "Logout", user_session_path, :method => :delete}
-        %h1#logo What's a good name for a band?
+        %h1#logo= link_to("What's a good name for a band?", "/")
         .subheader
           - if @active_sort
             = yield :sort_menu
@@ -35,15 +58,23 @@
                 Suggest a name:&nbsp;
                 = text_field_tag("name")
                 = submit_tag("Submit", :class=>"name_submit")
+          /
+            .fb_like_site
+              %fb:like
+
       .meat
         - if flash[:notice]
           %p{:class => "notice"}= flash[:notice]
         = yield
         .clear
+        -#= authlogic_facebook_login_button(:js => :jquery)
       = javascript_include_tag('application')
       :javascript
         jq(document).ready(function() {
           #{"BN.logged_in=true;" if current_user}
           #{@misc_js.join('')}
         });
+      /
+        = #fb_connect_javascript_tag
+        = #init_fb_connect("XFBML", :js => :jquery)
 
