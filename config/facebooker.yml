@@ -3,3 +3,9 @@ development:
  secret_key: 7865d69865299e2f9d4b9c47e602db23
  #canvas_page_name: mygreatapp-dev
  callback_url: http://mightyquiz.com:4007
+
+production:
+ api_key: 9a1d871fa858cedb024b81c3fc731de4
+ secret_key: 7865d69865299e2f9d4b9c47e602db23
+ #canvas_page_name: mygreatapp-dev
+ callback_url: http://mightyquiz.com:4007
