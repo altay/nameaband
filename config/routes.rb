@@ -47,10 +47,14 @@ ActionController::Routing::Routes.draw do |map|
   map.profile 'people/:login', :controller=>"users", :action=>"show"
 
   # names
-  map.root :controller=>"names", :action=>"list"
+  map.root :controller=>"names", :action=>"random"
   map.connect 'names/create', :controller=>'names', :action=>'create'
   map.connect 'names/toggle_opinion', :controller=>'names', :action=>'toggle_opinion'
-  map.list_names 'names/:active_sort', :controller=>"names", :action=>"list"
+  map.connect 'names/list', :controller=>"names", :action=>"list"
+  map.connect 'names/random', :controller=>"names", :action=>"random"
+  map.list_names 'names/list/:active_sort', :controller=>"names", :action=>"list"
+  map.connect 'names/:id/:slug', :controller=>"names", :action=>"show"
+  map.connect 'names/:id', :controller=>"names", :action=>"show"
 
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'

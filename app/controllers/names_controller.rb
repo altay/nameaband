@@ -11,6 +11,11 @@ class NamesController < ApplicationController
   end
 
   def random
+    @judged_nids = (current_user ? current_user.judged_name_ids : [])
+    @name = Name.find(:first, :order=>"RANDOM()", :conditions=>["id NOT IN (?)", @judged_nids])
+    @last_judgement = (current_user ? current_user.last_judgement : nil)
+    @prev_name = @last_judgement.name
+    render(:template=>"names/show")
   end
 
 =begin # toggle_opinion use cases
@@ -66,7 +71,9 @@ class NamesController < ApplicationController
         end
       end
       @name.save
-      render(:json=>{:ok=>true}) and return 
+      render(:json=>(params[:list]=='true' ? 
+                     {:ok=>true} : 
+                     {:ok=>true, :redirect=>true})) and return 
     end
   end
 
@@ -77,6 +84,12 @@ class NamesController < ApplicationController
       TheMailer.deliver_new_name_notification(@name)
     end
     redirect_to('/') and return
+  end
+
+  def show
+    logger.info('cu: ')
+    logger.info(current_user.inspect)
+    @name = Name.find(params[:id])
   end
 
 end

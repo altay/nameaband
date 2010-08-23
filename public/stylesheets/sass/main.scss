@@ -71,16 +71,18 @@ h1#logo {
 li.name {
   list-style-type: none;
   margin: 15px 0;
-  .name {
-    font-size: 22px;
-    font-weight: bold; 
-    margin-bottom: 1px; }
-  .name_info {
-    color: #999999;
-    font-size: 13px; } }
-  .exists_form input, .exists_form button {
-    font-size: 10px;
-  }
+}
+.name {
+  font-size: 22px;
+  font-weight: bold; 
+  margin-bottom: 1px; }
+.name_info {
+  color: #999999;
+  font-size: 13px; 
+  span {
+    color: red; }} 
+.exists_form input, .exists_form button {
+  font-size: 10px; }
 
 .loginform {
   width: 250px; }
@@ -129,12 +131,25 @@ h1.page_title {
       margin: 5px;
       .fb_like_site {
         height: 1em;
-        padding: 15px 0 5px;
-      }
-    }
-  }
+        padding: 15px 0 5px; } } }
   .meat {
     //padding-top: 120px; // if fb like button
     padding-top: 80px;
     padding-left: 5px; } }
 
+h1.the_name {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 80px auto 30px;
+  text-align: center; }
+
+
+.likelinks {
+  color: #ccc;
+  list-style-type: none;
+  text-align: center;
+  font-size: 16px;
+  a { font-size: 30px; } }
+
+.prev_name {
+  margin: 30px auto;}

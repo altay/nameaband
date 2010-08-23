@@ -10,4 +10,9 @@ class Name < ActiveRecord::Base
     ["likes", "likes_count DESC"],
     ["alpha", "name"]
   ]
+
+  def percent_liked
+    return ((self.likes_count.to_f/(self.likes_count+self.dislikes_count).to_f)*100.0)
+  end
+
 end

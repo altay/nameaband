@@ -108,83 +108,89 @@ li.name {
   list-style-type: none;
   margin: 15px 0;
 }
-/* line 74, sass/main.scss */
-li.name .name {
+
+/* line 75, sass/main.scss */
+.name {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 1px;
 }
-/* line 78, sass/main.scss */
-li.name .name_info {
+
+/* line 79, sass/main.scss */
+.name_info {
   color: #999999;
   font-size: 13px;
 }
+/* line 82, sass/main.scss */
+.name_info span {
+  color: red;
+}
 
-/* line 81, sass/main.scss */
+/* line 84, sass/main.scss */
 .exists_form input, .exists_form button {
   font-size: 10px;
 }
 
-/* line 85, sass/main.scss */
+/* line 87, sass/main.scss */
 .loginform {
   width: 250px;
 }
 
-/* line 88, sass/main.scss */
+/* line 90, sass/main.scss */
 .signupform {
   width: 310px;
 }
 
-/* line 91, sass/main.scss */
+/* line 93, sass/main.scss */
 .loginform, .signupform {
   float: right;
   margin: 30px 0px;
 }
-/* line 94, sass/main.scss */
+/* line 96, sass/main.scss */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 98, sass/main.scss */
+/* line 100, sass/main.scss */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 100, sass/main.scss */
+/* line 102, sass/main.scss */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 102, sass/main.scss */
+/* line 104, sass/main.scss */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 104, sass/main.scss */
+/* line 106, sass/main.scss */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 106, sass/main.scss */
+/* line 108, sass/main.scss */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* line 110, sass/main.scss */
+/* line 112, sass/main.scss */
 h1.page_title {
   color: red;
   font-size: 20px;
   margin: 20px 0;
 }
-/* line 114, sass/main.scss */
+/* line 116, sass/main.scss */
 h1.page_title a {
   font-weight: bold;
 }
 
-/* line 117, sass/main.scss */
+/* line 119, sass/main.scss */
 .main_container {
   width: 700px;
   margin: 0 auto;
 }
-/* line 120, sass/main.scss */
+/* line 122, sass/main.scss */
 .main_container .header {
   -moz-box-shadow: #cccccc 1px 1px 5px;
   -webkit-box-shadow: #cccccc 1px 1px 5px;
@@ -208,17 +214,42 @@ h1.page_title a {
   margin-left: -20px;
   width: 700px;
 }
-/* line 128, sass/main.scss */
+/* line 130, sass/main.scss */
 .main_container .header .subheader {
   margin: 5px;
 }
-/* line 130, sass/main.scss */
+/* line 132, sass/main.scss */
 .main_container .header .subheader .fb_like_site {
   height: 1em;
   padding: 15px 0 5px;
 }
-/* line 136, sass/main.scss */
+/* line 135, sass/main.scss */
 .main_container .meat {
   padding-top: 80px;
   padding-left: 5px;
+}
+
+/* line 140, sass/main.scss */
+h1.the_name {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 80px auto 30px;
+  text-align: center;
+}
+
+/* line 147, sass/main.scss */
+.likelinks {
+  color: #ccc;
+  list-style-type: none;
+  text-align: center;
+  font-size: 16px;
+}
+/* line 152, sass/main.scss */
+.likelinks a {
+  font-size: 30px;
+}
+
+/* line 154, sass/main.scss */
+.prev_name {
+  margin: 30px auto;
 }
