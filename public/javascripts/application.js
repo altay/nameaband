@@ -13,6 +13,11 @@ var BN = new function() {
     })
   }
 
+  this.toggle_exists_form = function(nid) {
+    var the_form = jq("li.name_"+nid+' .exists_form');
+    the_form.animate({left: (parseInt(the_form.css('left'),10) == 0 ? (0-the_form.outerWidth()) : 0)})
+  }
+
   this.toggle_opinion = function(nid, opinion_type) { //opinion_type is 'like' or 'dislike'
     if (BN.logged_in) {
       jq.post(

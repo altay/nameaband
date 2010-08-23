@@ -120,66 +120,71 @@ li.name .name_info {
   font-size: 13px;
 }
 
-/* line 82, ../sass/main.scss */
+/* line 81, ../sass/main.scss */
+.exists_form input, .exists_form button {
+  font-size: 10px;
+}
+
+/* line 85, ../sass/main.scss */
 .loginform {
   width: 250px;
 }
 
-/* line 85, ../sass/main.scss */
+/* line 88, ../sass/main.scss */
 .signupform {
   width: 310px;
 }
 
-/* line 88, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 .loginform, .signupform {
   float: right;
   margin: 30px 0px;
 }
-/* line 91, ../sass/main.scss */
+/* line 94, ../sass/main.scss */
 .loginform h1, .signupform h1 {
   text-align: right;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 95, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 .loginform table, .signupform table {
   width: 100%;
 }
-/* line 97, ../sass/main.scss */
+/* line 100, ../sass/main.scss */
 .loginform td.label, .signupform td.label {
   text-align: right;
 }
-/* line 99, ../sass/main.scss */
+/* line 102, ../sass/main.scss */
 .loginform td, .signupform td {
   padding: 3px;
 }
-/* line 101, ../sass/main.scss */
+/* line 104, ../sass/main.scss */
 .loginform p, .signupform p {
   text-align: right;
 }
-/* line 103, ../sass/main.scss */
+/* line 106, ../sass/main.scss */
 .loginform .signuplink, .signupform .signuplink {
   font-size: 13px;
   margin-top: 10px;
 }
 
-/* line 107, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 h1.page_title {
   color: red;
   font-size: 20px;
   margin: 20px 0;
 }
-/* line 111, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 h1.page_title a {
   font-weight: bold;
 }
 
-/* line 114, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 .main_container {
   width: 700px;
   margin: 0 auto;
 }
-/* line 117, ../sass/main.scss */
+/* line 120, ../sass/main.scss */
 .main_container .header {
   -moz-box-shadow: #cccccc 1px 1px 5px;
   -webkit-box-shadow: #cccccc 1px 1px 5px;
@@ -203,16 +208,16 @@ h1.page_title a {
   margin-left: -20px;
   width: 700px;
 }
-/* line 125, ../sass/main.scss */
+/* line 128, ../sass/main.scss */
 .main_container .header .subheader {
   margin: 5px;
 }
-/* line 127, ../sass/main.scss */
+/* line 130, ../sass/main.scss */
 .main_container .header .subheader .fb_like_site {
   height: 1em;
   padding: 15px 0 5px;
 }
-/* line 133, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .main_container .meat {
   padding-top: 80px;
   padding-left: 5px;

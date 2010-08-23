@@ -1,16 +1,27 @@
 %li{:class=>"name name_#{name.secret_id}"}
   %p.name
     = h(name.name) 
-  %p.name_info
-    submitted by 
-    = link_to(h(name.user.login), profile_url(:login=>name.user.login))
-    &bull;
-    = link_to_function('like', "BN.toggle_opinion('#{name.secret_id}', 'like')", :class=>'like_link') 
-    (
-    %span{:class=>"count likes_count_#{name.secret_id}"}<>= name.likes_count.to_s
-    )
-    &bull;
-    = link_to_function('dislike', "BN.toggle_opinion('#{name.secret_id}', 'dislike')", :class=>'dislike_link') 
-    (
-    %span{:class=>"count dislikes_count_#{name.secret_id}"}<>= name.dislikes_count.to_s
-    )
+  %table
+    %tr
+      %td
+        %p.name_info{:style=>'float:eft;'}
+          submitted by 
+          = link_to(h(name.user.login), profile_url(:login=>name.user.login))
+          &bull;
+          = link_to_function('like', "BN.toggle_opinion('#{name.secret_id}', 'like')", :class=>'like_link') 
+          (
+          %span{:class=>"count likes_count_#{name.secret_id}"}<>= name.likes_count.to_s
+          )
+          &bull;
+          = link_to_function('dislike', "BN.toggle_opinion('#{name.secret_id}', 'dislike')", :class=>'dislike_link') 
+          (
+          %span{:class=>"count dislikes_count_#{name.secret_id}"}<>= name.dislikes_count.to_s
+          )
+          &bull;
+          = link_to_function('existing band?', "BN.toggle_exists_form('#{name.secret_id}')", :class=>'exists_link') 
+      %td{:style=>'position:relative;width:300px'}
+        %div{:style=>'position:relative;overflow:hidden;width:300px;height:1.4em'}
+          %p{:class=>'exists_form', :style=>'left:-300px;position:absolute;padding-left:5px;top:0;width:300px'}
+            = text_field_tag('url')
+            = submit_tag('submit')
+            %button{:onclick=>"BN.toggle_exists_form('#{name.secret_id}');return false;"} cancel
