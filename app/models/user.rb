@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   acts_as_authentic{|c|
     #c.validates_length_of_email_field_options(:minimum=>nil)
+    #c.validate_login_field(false)
   }
 #  validates_uniqueness_of :login
   has_many :names
@@ -8,6 +9,12 @@ class User < ActiveRecord::Base
   has_many :dislikes
   has_many :liked_names, :through=>:likes, :source=>:name
   has_many :disliked_names, :through=>:dislikes, :source=>:name
+  after_create{|new_user|
+    if !new_user.login.empty?
+      new_user.anonymous=false
+      new_user.save!
+    end
+  }
 
   def judged_names
     return self.liked_names+self.disliked_names

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100630023140) do
+ActiveRecord::Schema.define(:version => 20100905105428) do
 
   create_table "dislikes", :force => true do |t|
     t.integer  "name_id",    :null => false
@@ -47,6 +47,28 @@ ActiveRecord::Schema.define(:version => 20100630023140) do
   add_index "names", ["user_id"], :name => "index_names_on_user_id"
 
   create_table "users", :force => true do |t|
+    t.string   "login"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.string   "single_access_token"
+    t.string   "perishable_token"
+    t.string   "fb_name"
+    t.integer  "facebook_uid",        :limit => 8
+    t.integer  "login_count",                      :default => 0
+    t.integer  "failed_login_count",               :default => 0
+    t.datetime "last_request_at"
+    t.datetime "current_login_at"
+    t.datetime "last_login_at"
+    t.string   "current_login_ip"
+    t.string   "last_login_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "anonymous",                        :default => true
+  end
+
+  create_table "users_old", :force => true do |t|
     t.string   "login",                                           :null => false
     t.string   "crypted_password",                                :null => false
     t.string   "password_salt",                                   :null => false
@@ -67,6 +89,6 @@ ActiveRecord::Schema.define(:version => 20100630023140) do
     t.integer  "facebook_uid",        :limit => 8
   end
 
-  add_index "users", ["login"], :name => "index_users_on_login"
+  add_index "users_old", ["login"], :name => "index_users_on_login"
 
 end

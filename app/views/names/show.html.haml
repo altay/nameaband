@@ -9,8 +9,11 @@
       rating:
       %span #{@prev_name.percent_liked}%
       based on #{pluralize(@prev_name.likes_count+@prev_name.dislikes_count, 'vote')}
-%h1.the_name= h(@name.name)
-%p{:class=>'likelinks'}
-  = link_to("I like it!", "/", {:onclick=>"BN.toggle_opinion('#{@name.secret_id}', 'like');return false;"})
-  &nbsp;&laquo; Pick one &raquo;&nbsp;
-  = link_to("I don't like it.", "/", {:onclick=>"BN.toggle_opinion('#{@name.secret_id}', 'dislike');return false;"})
+- if @name.nil?
+  %h1.the_name No more!
+- else
+  %h1.the_name= h(@name.name)
+  %p{:class=>'likelinks'}
+    = link_to("I like it!", "/", {:onclick=>"BN.toggle_opinion('#{@name.secret_id}', 'like');return false;"})
+    &nbsp;&laquo; Pick one &raquo;&nbsp;
+    = link_to("I don't like it.", "/", {:onclick=>"BN.toggle_opinion('#{@name.secret_id}', 'dislike');return false;"})

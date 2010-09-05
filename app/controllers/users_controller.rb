@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     @no_suggestion_box = true
     @user = User.new(params[:user])
-    if @user.save
+    if @user.save!
       flash[:notice] = "Welcome!"
       redirect_back_or_default "/" #account_url
     else
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   
   def show
     @active_sort = (params[:active_sort] || "new")
-    @user = (User.find_by_login(params[:login]) || current_user)
+    @user = (params[:login] ? User.find_by_login(params[:login]) : current_user)
     @suggested_names = @user.names.all(:order=>Name::SORT_OPTIONS.assoc(@active_sort)[1])
     @liked_names = @user.liked_names.all(:order=>'likes.created_at DESC')
     @current_user_liked_nids = (current_user ? current_user.liked_names.map(&:secret_id) : [])

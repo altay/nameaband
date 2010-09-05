@@ -12,9 +12,10 @@ class NamesController < ApplicationController
 
   def random
     @judged_nids = (current_user ? current_user.judged_name_ids : [])
+    @judged_nids = [0] if @judged_nids.empty?
     @name = Name.find(:first, :order=>"RANDOM()", :conditions=>["id NOT IN (?)", @judged_nids])
     @last_judgement = (current_user ? current_user.last_judgement : nil)
-    @prev_name = @last_judgement.name
+    @prev_name = @last_judgement.name unless @last_judgement.nil?
     render(:template=>"names/show")
   end
 
@@ -87,8 +88,6 @@ class NamesController < ApplicationController
   end
 
   def show
-    logger.info('cu: ')
-    logger.info(current_user.inspect)
     @name = Name.find(params[:id])
   end
 
